@@ -1,0 +1,29 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: mcp-router
+
+logging:
+  level:
+    root: INFO
+    com.mcp.router: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+# Router specific configurations
+mcp:
+  router:
+    discovery:
+      enabled: true
+      refresh-interval: 30000  # 30秒刷新一次服务列表
+    health-check:
+      enabled: true
+      interval: 60000  # 每分钟检查一次服务健康状态
+      timeout: 5000    # 5 seconds
+

@@ -1,0 +1,21 @@
+server:
+  port: 18083
+
+spring:
+  application:
+    name: mcp-remote-server
+  # main:
+  #   allow-circular-references: true
+
+mcp:
+  router:
+    url: http://localhost:8025
+#   supported-tools:
+#     - customTool1
+#     - customTool2
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+    com.mcp: DEBUG 

@@ -1,0 +1,30 @@
+server:
+  port: 8081  # 可以根据实际情况调整
+
+spring:
+  application:
+    name: mcp-remote-service
+#  main:
+#    allow-circular-references: true  # Added to resolve circular reference warning
+
+mcp:
+  router:
+    url: http://localhost:8761/router  # 更新为完整的服务注册路径
+
+# Health endpoint configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+      probe:
+        enable: true
+logging:
+  level:
+    root: INFO
+    com.mcp.remote: DEBUG
+    com.mcp.sdk: DEBUG
+    org.springframework.web: DEBUG  # 增加详细的Web日志级别
