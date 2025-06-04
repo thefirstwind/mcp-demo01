@@ -33,7 +33,7 @@ public class McpRemoteApplication {
     private static final Logger logger = LoggerFactory.getLogger(McpRemoteApplication.class);
 
     @Resource
-    private static McpServerToolProcessor mcpServerToolProcessor;
+    private McpServerToolProcessor mcpServerToolProcessor;
 
     @Bean
     public RestTemplate restTemplate() {
